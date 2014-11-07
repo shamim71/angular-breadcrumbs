@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="mtech.cms">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS BreadCrumbs Demo</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js"></script>
+    <script src="https://raw.githubusercontent.com/shamim71/angular-breadcrumbs/master/src/angular_breadcrumbs.js"></script>
+    <script src="demo.js"></script>
+
+
+  </head>
+
+  <body>
+
+<div ng-controller="BreadCrumbsDemoCtrl">
+
+  <div class="callout callout-info">
+    <h4>Daily Schedule Report</h4>
+    <p>Please select your project and the date of work. Once the report has been populated, you can copy this content and paste to your outlook email body.</p>
+  </div>
+
+
+<div class="row">
+
+	<ul id="home" mt-bread-crumbs datasource="folders" on-node-selected="OnItemClicked"></ul>
+
+	<p>
+	    Above is a bootstrap-styled Breadcrumbs control. 
+	</p>
+	<form>
+		<button ng-click='pushSomething()'>Add More Sub Folder</button>
+	</form>
+
+				
+</div>
+
+
+  </body>
+
+</html>
